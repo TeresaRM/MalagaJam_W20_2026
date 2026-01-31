@@ -1,32 +1,27 @@
 using UnityEngine;
 using System.Collections.Generic;
-using UnityEngine.UIElements;
-
+using UnityEngine.Rendering;
 public class TapeRotation : MonoBehaviour
 {
-    private Vector3 mousePos;
-    private float previousLocation;
-    private float currentLocation;
-    [SerializeField] private float _errorMargin = 0.5f;
-    [SerializeField] private float _rotationSpeed = 2f;
+    public float angle {  get; private set; }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        previousLocation = mousePos.x;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        currentLocation = mousePos.x;
+        //rotation
+        Vector3 mousePos = Input.mousePosition;
+        mousePos.z = 0;
 
-        if (currentLocation < previousLocation - _errorMargin)
-        {
+        Vector3 objectPos = Camera.main.WorldToScreenPoint(transform.position);
+        mousePos.x = mousePos.x - objectPos.x;
+        mousePos.y = mousePos.y - objectPos.y;
 
-        } else if (currentLocation > previousLocation + _errorMargin)
-        {
-
-        }
+        angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle -90));
     }
 }
