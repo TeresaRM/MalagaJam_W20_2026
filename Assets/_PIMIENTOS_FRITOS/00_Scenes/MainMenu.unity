@@ -1559,7 +1559,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FreeMode: 
   HistoryMode: 
-  Gallery: Gallery
+  Gallery: 
 --- !u!4 &1625866905
 Transform:
   m_ObjectHideFlags: 0
