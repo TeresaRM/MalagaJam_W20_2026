@@ -15,11 +15,12 @@ public class GlueTape : MonoBehaviour
         if (Input.GetKey(KeyCode.Space) || Input.GetMouseButton(1))
         {
             _tapeTrail.emitting = true;
-
+            PointsManager.Instance.SetIsPasted(true);
         }
         else
         {
             _tapeTrail.emitting = false;
+            PointsManager.Instance.SetIsPasted(false);
         }
             
     }
