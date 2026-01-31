@@ -13,8 +13,7 @@ public class MovementController : MonoBehaviour
     [SerializeField] float velocityChange = 30f;
 
     [Header("Rotation")]
-    [SerializeField] float _errorMargin = 2f;
-    [SerializeField] float _rotationSpeed = 2f;
+    [SerializeField] float _rotationSpeed = 0.7f;
     private TapeRotation tapeRotation;
     public float mouseWheelInput { get; private set;}
     
