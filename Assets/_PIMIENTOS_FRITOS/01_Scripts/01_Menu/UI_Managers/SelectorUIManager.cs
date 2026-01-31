@@ -6,19 +6,29 @@ using UnityEngine.SceneManagement;
 
 public class SelectorUIManager : MonoBehaviour
 {
+    [Header("Fade Settings")]
+    [SerializeField] private float fadeDuration;
+    [SerializeField] private CanvasGroup fadeCanvasGroup;
+
+    [Header("Leaderboard Settings")]
     [SerializeField] private TextMeshProUGUI leaderboardContents;
     [SerializeField] private float rankingFadeDuration;
 
     public void StartLevel(int level)
     {
         StartCoroutine(ActionsAfterStartAnim(level));
-        //LeaveLevelSelector();
+        LeaveLevelSelector();
     }
 
     private IEnumerator ActionsAfterStartAnim(int level)
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(fadeDuration);
         SceneManager.LoadScene(level);  // load selected level (lvl 1 = 2, lvl 2 = 3, lvl 3 = 4)
+    }
+
+    private void LeaveLevelSelector()
+    {
+        fadeCanvasGroup.DOFade(1, fadeDuration);
     }
 
     public void ShowPanel(GameObject container)   // triggered by the ranking buttons

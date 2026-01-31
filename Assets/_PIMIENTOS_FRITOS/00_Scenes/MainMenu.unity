@@ -366,6 +366,7 @@ MonoBehaviour:
     musicClip: {fileID: 8300000, guid: bfae174183ca2f7438a0a1d1a2b02ce4, type: 3}
     allowedScenes:
     - MainMenu
+    - LevelSelector
     restartOnSwitch: 0
     volume: 0.45
 --- !u!4 &187225774
@@ -1545,7 +1546,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FreeMode: 
-  HistoryMode: 
+  HistoryMode: LevelSelector
   Gallery: 
 --- !u!4 &1625866905
 Transform:
