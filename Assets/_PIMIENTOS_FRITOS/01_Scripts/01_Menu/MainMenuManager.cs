@@ -5,7 +5,7 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField] string FreeMode;
     [SerializeField] string HistoryMode;
-    [SerializeField] string FinalScore;
+    [SerializeField] string Gallery;
 
     public void GoToFreeMode()
     {
@@ -16,9 +16,9 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(HistoryMode);
     }
-    public void GoToFinalScore()
+    public void GoToGallery()
     {
-        SceneManager.LoadScene(FinalScore);
+        SceneManager.LoadScene(Gallery);
     }
 
     public void ExitGame()

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LootLockerConfig
   m_EditorClassIdentifier: 
   apiKey: dev_3d11d1340d98437c810dc32758beeb44
-  adminToken: 673867989ca0b846159ad4e6384ba081bbc8e3f9
+  adminToken: 09bfcaea0f688788c8ffc997560619293cec11a0
   domainKey: gfo2rc18
   game_version: 1.0.0.0
   sdk_version: 7.0.0
