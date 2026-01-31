@@ -3434,8 +3434,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 666411268}
-  - {fileID: 317271709}
   - {fileID: 1752033634}
+  - {fileID: 317271709}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3904,8 +3904,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level2Button: {fileID: 327058729}
   level3Button: {fileID: 1994694720}
-  door2Image: {fileID: 0}
-  door3Image: {fileID: 0}
+  door2Image: {fileID: 327058730}
+  door3Image: {fileID: 1994694721}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
