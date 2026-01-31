@@ -8,12 +8,11 @@ public class MovementController : MonoBehaviour
     private Vector2 direccion;
 
     [Header("Translation")]
-    [SerializeField] float falloffRate = 0.02f;
-    [SerializeField] float MAXImpulse = 600f;
-    [SerializeField] float velocityChange = 30f;
+    [SerializeField] float falloffRate = 0.01f;
+    [SerializeField] float MAXImpulse = 900f;
+    [SerializeField] float velocityChange = 10f;
 
     [Header("Rotation")]
-    [SerializeField] float _rotationSpeed = 0.7f;
     private TapeRotation tapeRotation;
     public float mouseWheelInput { get; private set;}
     
@@ -38,8 +37,6 @@ public class MovementController : MonoBehaviour
         mouseWheelInput = Input.mouseScrollDelta.y;
 
         Movement();
-
-        Debug.Log(_rigidbody.linearVelocity.magnitude + " " + _impulseCounter);
     }
 
     void ImpulseChecker()
