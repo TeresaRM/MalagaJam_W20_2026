@@ -8,6 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/_PIMIENTOS_FRITOS/00_Scenes/MainMenu.unity
+    guid: 6e5b5ab2093035f4cbadf981f2e281ad
+  - enabled: 1
+    path: Assets/_PIMIENTOS_FRITOS/00_Scenes/Gallery.unity
+    guid: b704c1891e4d7ea4582ef2c01afaf8c6
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
