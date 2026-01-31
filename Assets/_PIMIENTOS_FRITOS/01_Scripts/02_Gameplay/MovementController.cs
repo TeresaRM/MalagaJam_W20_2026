@@ -7,9 +7,14 @@ public class MovementController : MonoBehaviour
     private Rigidbody2D _rigidbody;
     private Vector2 direccion;
 
+    [Header("Translation")]
     [SerializeField] float falloffRate = 0.02f;
     [SerializeField] float MAXImpulse = 600f;
     [SerializeField] float velocityChange = 30f;
+
+    [Header("Rotation")]
+    [SerializeField] float _rotationSpeed = 0.7f;
+    private TapeRotation tapeRotation;
     public float mouseWheelInput { get; private set;}
     
     private float _impulseCounter = 0;
@@ -18,12 +23,12 @@ public class MovementController : MonoBehaviour
     void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
+        tapeRotation = GetComponent<TapeRotation>();
     }
 
     private void Update()
     {    
-        float angulo = transform.eulerAngles.z * Mathf.Deg2Rad;
-         direccion = new Vector2(Mathf.Sin(angulo), Mathf.Cos(angulo)).normalized;
+        direccion = transform.up;
 
         ImpulseChecker();
     }
