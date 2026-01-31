@@ -128,6 +128,32 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: VisionOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -135,12 +161,12 @@ TextureImporter:
       name: door_lvl1_0
       rect:
         serializedVersion: 2
-        x: 198
-        y: 560
-        width: 110
-        height: 218
+        x: 0
+        y: 0
+        width: 1080
+        height: 1080
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -149,50 +175,6 @@ TextureImporter:
       bones: []
       spriteID: efe68e5e5292d9e90800000000000000
       internalID: -7017407401625620738
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: door_lvl1_1
-      rect:
-        serializedVersion: 2
-        x: 289
-        y: 14
-        width: 505
-        height: 1052
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a7e194e111881cd50800000000000000
-      internalID: 6755830523136384634
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: door_lvl1_2
-      rect:
-        serializedVersion: 2
-        x: 758
-        y: 445
-        width: 92
-        height: 93
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 161d7a9719e3c7860800000000000000
-      internalID: 7528961471588847969
       vertices: []
       indices: 
       edges: []
@@ -212,8 +194,6 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       door_lvl1_0: -7017407401625620738
-      door_lvl1_1: 6755830523136384634
-      door_lvl1_2: 7528961471588847969
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
