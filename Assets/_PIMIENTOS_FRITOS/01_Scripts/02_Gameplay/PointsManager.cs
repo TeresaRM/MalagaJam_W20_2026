@@ -38,23 +38,16 @@ public class PointsManager : MonoBehaviour
     }
     void Start()
     {
-
         foreach (PolygonCollider2D childCol in polis)
         {
             var points = childCol.points;
             numberOfObjects += points.Length;
-
             for (int i = 0; i < points.Length; i++)
             {
                 var positionWorld = childCol.transform.TransformPoint(points[i] * offset);
-
                 Instantiate(checkpoint, positionWorld, Quaternion.identity);
             }
-
         }
-
-
-
     }
 
     void Update()
