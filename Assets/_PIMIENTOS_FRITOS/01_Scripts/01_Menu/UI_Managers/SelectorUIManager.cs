@@ -14,6 +14,11 @@ public class SelectorUIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI leaderboardContents;
     [SerializeField] private float rankingFadeDuration;
 
+    private void Start()
+    {
+        fadeCanvasGroup.DOFade(0, fadeDuration);
+    }
+
     public void StartLevel(int level)
     {
         StartCoroutine(ActionsAfterStartAnim(level));
@@ -26,10 +31,7 @@ public class SelectorUIManager : MonoBehaviour
         SceneManager.LoadScene(level);  // load selected level (lvl 1 = 2, lvl 2 = 3, lvl 3 = 4)
     }
 
-    private void LeaveLevelSelector()
-    {
-        fadeCanvasGroup.DOFade(1, fadeDuration);
-    }
+    private void LeaveLevelSelector() => fadeCanvasGroup.DOFade(1, fadeDuration);
 
     public void ShowPanel(GameObject container)   // triggered by the ranking buttons
     {
