@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class SelectorUIManager : MonoBehaviour
 {
+    [Header("Back Button")]
+    [SerializeField] string backButton;
+
     [Header("Fade Settings")]
     [SerializeField] private float fadeDuration;
     [SerializeField] private CanvasGroup fadeCanvasGroup;
@@ -59,5 +62,17 @@ public class SelectorUIManager : MonoBehaviour
                 container.GetComponent<CanvasGroup>().blocksRaycasts = false;
                 container.GetComponent<CanvasGroup>().interactable = false;
             });
+    }
+
+    public void GoBack()  // triggered by the back button in the selector menu (go back to main menu)
+    {
+        StartCoroutine(ActionsAfterLeaving());
+        LeaveLevelSelector();
+    }
+
+    private IEnumerator ActionsAfterLeaving()
+    {
+        yield return new WaitForSeconds(fadeDuration);
+        SceneManager.LoadScene(0);
     }
 }
