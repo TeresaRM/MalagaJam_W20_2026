@@ -8,19 +8,18 @@ public class SelectorManager : MonoBehaviour
     [Header("Door Settings")]
     [SerializeField] private Button level2Button;
     [SerializeField] private Button level3Button;
-    [SerializeField] private Image door2Image;
-    [SerializeField] private Image door3Image;
 
-    private void Awake()
-    {
-        selectorManagerInstance = this;
-    }
+    private void Awake() => selectorManagerInstance = this;
 
-    private void Start()
+    private void Start() => LockAllLevelsExceptFirst();
+
+    public void LockAllLevelsExceptFirst()
     {
         level2Button.interactable = false;
         level3Button.interactable = false;
     }
 
+    public void UnlockLevel2() => level2Button.interactable = true;
 
+    public void UnlockLevel3() => level3Button.interactable = true;
 }

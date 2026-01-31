@@ -582,7 +582,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -592,10 +592,10 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 6738470122992072912, guid: 035ef799c1fbed24da70e8110a21b20b, type: 3}
+    m_PressedSprite: {fileID: 6738470122992072912, guid: 035ef799c1fbed24da70e8110a21b20b, type: 3}
+    m_SelectedSprite: {fileID: 6738470122992072912, guid: 035ef799c1fbed24da70e8110a21b20b, type: 3}
+    m_DisabledSprite: {fileID: -1815677799082658980, guid: 69c06c5c8e24c6a42aabd6cca06bdb17, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -3657,7 +3657,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -3667,10 +3667,10 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 270202700291117665, guid: 06ddbc2e7b890724687e10f76bdf8bd4, type: 3}
+    m_PressedSprite: {fileID: 270202700291117665, guid: 06ddbc2e7b890724687e10f76bdf8bd4, type: 3}
+    m_SelectedSprite: {fileID: 270202700291117665, guid: 06ddbc2e7b890724687e10f76bdf8bd4, type: 3}
+    m_DisabledSprite: {fileID: 5033364909627464308, guid: e96a51c90cdd4314d83d5ff02196e275, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -3916,6 +3916,8 @@ MonoBehaviour:
   level3Button: {fileID: 1994694720}
   door2Image: {fileID: 327058730}
   door3Image: {fileID: 1994694721}
+  unlockedDoor2: {fileID: 2800000, guid: 035ef799c1fbed24da70e8110a21b20b, type: 3}
+  unlockedDoor3: {fileID: 2800000, guid: 06ddbc2e7b890724687e10f76bdf8bd4, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

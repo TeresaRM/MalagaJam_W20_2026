@@ -11,15 +11,9 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private CanvasGroup fadeCanvasGroup;
     private float fadeDuration = 0.5f;
 
-    private void Start()
-    {
-        fadeCanvasGroup.DOFade(0, fadeDuration);
-    }
+    private void Start() => fadeCanvasGroup.DOFade(0, fadeDuration);
 
-    public void GoToFreeMode()
-    {
-        SceneManager.LoadScene(FreeMode);
-    }
+    public void GoToFreeMode() => SceneManager.LoadScene(FreeMode);
 
     public void GoToHistoryMode()
     {
@@ -35,10 +29,7 @@ public class MainMenu : MonoBehaviour
 
     private void LeaveMainMenu() => fadeCanvasGroup.DOFade(1, fadeDuration);
 
-    public void GoToGallery()
-    {
-        SceneManager.LoadScene(Gallery);
-    }
+    public void GoToGallery() => SceneManager.LoadScene(Gallery);
 
     public void ExitGame()
     {
