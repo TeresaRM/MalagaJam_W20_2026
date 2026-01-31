@@ -21,11 +21,12 @@ public class CheckPoint : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Cinta"))
         {
-            Debug.Log("Checkpoint reached!");
-            PointsManager.Instance.SetCheckpointPass();
+            if (PointsManager.Instance.GetIsPasted())
+            {
+                PointsManager.Instance.SetCheckpointPass();
 
-
-            Destroy(gameObject);
+                Destroy(gameObject);
+            }
         }
     }
 }
