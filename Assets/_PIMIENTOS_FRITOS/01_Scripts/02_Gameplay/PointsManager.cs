@@ -1,4 +1,5 @@
 
+using System.Collections.Generic;
 using System.Drawing;
 using UnityEditor;
 using UnityEngine;
@@ -11,9 +12,7 @@ public class PointsManager : MonoBehaviour
 
     public GameObject checkpoint;
 
-    public PolygonCollider2D col;
-
-    public Vector2[] Points;
+    // public PolygonCollider2D col
     public float offset = 0.5f;
 
     public int checkpointpass = 0;
@@ -23,6 +22,8 @@ public class PointsManager : MonoBehaviour
     public float totalPoints = 0;
     public static PointsManager Instance { get; private set; }
 
+    public bool isPasted = false;
+    public List<PolygonCollider2D> polis = new List<PolygonCollider2D>();
     private void Awake()
     {
 
@@ -37,37 +38,21 @@ public class PointsManager : MonoBehaviour
     }
     void Start()
     {
-        // var r = GetComponent<Renderer>();
-        // if (r == null)
-        //     return;
-        // var bounds = r.bounds;
-
-        // Debug.Log(bounds);
-
-        var points = col.points;
-        numberOfObjects = points.Length;
-        Debug.Log(points);
-
-        // for (int i = 0; i < col.pathCount; ++i)
-        // {
-        //     Debug.Log(col.GetPath(i).Length);
-        // }
-        for (int i = 0; i < points.Length; i++)
+        foreach (PolygonCollider2D childCol in polis)
         {
-            var positionWorld = col.transform.TransformPoint(points[i] * offset);
-
-            Instantiate(checkpoint, positionWorld, Quaternion.identity);
+            var points = childCol.points;
+            numberOfObjects += points.Length;
+            for (int i = 0; i < points.Length; i++)
+            {
+                var positionWorld = childCol.transform.TransformPoint(points[i] * offset);
+                Instantiate(checkpoint, positionWorld, Quaternion.identity);
+            }
         }
-
-
     }
 
-    // Update is called once per frame
     void Update()
     {
-
         time += 1 * Time.deltaTime;
-
     }
 
     public void SetCheckpointPass()
@@ -77,6 +62,19 @@ public class PointsManager : MonoBehaviour
         totalPoints = (float)checkpointpass / (float)numberOfObjects * 1000f - time;
     }
 
+    public float GetTotalPoints()
+    {
+        return totalPoints;
+    }
+    public bool GetIsPasted()
+    {
+        return isPasted;
+    }
+
+    public void SetIsPasted(bool pasted)
+    {
+        isPasted = pasted;
+    }
 
 
 }
