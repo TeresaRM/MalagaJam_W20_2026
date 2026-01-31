@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: be4a9b9ace80dea49b8d8f4ed255ec2a
+guid: 10b58b0c3819ecd429e3749653a5ebc2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6750909419640878365
-    second: "Bot\xF3n 3_0"
+      213: -2755503930467685355
+    second: "Bot\xF3n 3 - Final_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -40,9 +40,9 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
-    wrapW: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -97,7 +97,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Android
+    buildTarget: VisionOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -123,7 +123,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WindowsStoreApps
+    buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Bot\xF3n 3_0"
+      name: "Bot\xF3n 3 - Final_0"
       rect:
         serializedVersion: 2
-        x: 155
-        y: 255
-        width: 1662
-        height: 514
+        x: 0
+        y: 162
+        width: 1920
+        height: 655
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d15788c695c00bd50800000000000000
-      internalID: 6750909419640878365
+      spriteID: 51ce74746cb72c9d0800000000000000
+      internalID: -2755503930467685355
       vertices: []
       indices: 
       edges: []
@@ -164,7 +164,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "Bot\xF3n 3_0": 6750909419640878365
+      "Bot\xF3n 3 - Final_0": -2755503930467685355
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

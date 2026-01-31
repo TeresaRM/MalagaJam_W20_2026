@@ -11,6 +11,11 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private CanvasGroup fadeCanvasGroup;
     private float fadeDuration = 0.5f;
 
+    private void Start()
+    {
+        fadeCanvasGroup.DOFade(0, fadeDuration);
+    }
+
     public void GoToFreeMode()
     {
         SceneManager.LoadScene(FreeMode);
@@ -37,6 +42,18 @@ public class MainMenu : MonoBehaviour
 
     public void ExitGame()
     {
+        StartCoroutine(ActionsAfterQuit());
+        LeaveMainMenu();
+    }
+
+    private IEnumerator ActionsAfterQuit()
+    {
+        yield return new WaitForSeconds(fadeDuration);
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
         Application.Quit();
+    }
+#endif
     }
 }

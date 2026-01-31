@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.000061035156, y: 0}
   m_SizeDelta: {x: 0, y: 553}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &12323043
@@ -327,7 +327,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: -47.5}
-  m_SizeDelta: {x: 138, y: 50}
+  m_SizeDelta: {x: 160, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &115831494
 MonoBehaviour:
@@ -1172,7 +1172,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1191618265}
   m_HandleRect: {fileID: 1191618264}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 0.000000091920434
   m_Size: 0.595122
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -2522,7 +2522,6 @@ GameObject:
   - component: {fileID: 1752033638}
   - component: {fileID: 1752033637}
   - component: {fileID: 1752033636}
-  - component: {fileID: 1752033635}
   - component: {fileID: 1752033639}
   m_Layer: 5
   m_Name: BackButton
@@ -2551,19 +2550,6 @@ RectTransform:
   m_AnchoredPosition: {x: -445.93, y: -244.62}
   m_SizeDelta: {x: 47.34, y: 43.56}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1752033635
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1752033633}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb6c6dad2c5fdb94eb897104623ef041, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Back: MainMenu
 --- !u!114 &1752033636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2608,8 +2594,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1752033635}
-        m_TargetAssemblyTypeName: BackButton, Assembly-CSharp
+      - m_Target: {fileID: 1891768404}
+        m_TargetAssemblyTypeName: SelectorUIManager, Assembly-CSharp
         m_MethodName: GoBack
         m_Mode: 1
         m_Arguments:
@@ -3117,6 +3103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4ac6f0d34955ed429e6de56c3ac7ca0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  backButton: 
   fadeDuration: 0.5
   fadeCanvasGroup: {fileID: 317271710}
   leaderboardContents: {fileID: 1340155528}
@@ -3927,8 +3914,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level2Button: {fileID: 327058729}
   level3Button: {fileID: 1994694720}
-  door2Image: {fileID: 0}
-  door3Image: {fileID: 0}
+  door2Image: {fileID: 327058730}
+  door3Image: {fileID: 1994694721}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

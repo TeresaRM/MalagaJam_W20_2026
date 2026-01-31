@@ -27,7 +27,7 @@ public class LootLockerLeaderboardManager : MonoBehaviour
 
             if (leaderboardData.items == null || leaderboardData.items.Length == 0)
             {
-                leaderboardText = "no scores available";
+                leaderboardText = "No Scores Available";
                 onLeaderboardRetrieved?.Invoke(leaderboardText);
             }
             else if (leaderboardData.success && leaderboardData.items.Length > 0)
