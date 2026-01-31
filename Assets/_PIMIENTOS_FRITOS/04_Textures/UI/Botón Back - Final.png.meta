@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ac03b3b726220da48a0a27322da14a54
+guid: 13a6f0dea313f574381fd3553c4e4e75
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1037067305761439302
-    second: "Bot\xF3n 1 - Final_0"
+      213: 6312668102911499258
+    second: "Bot\xF3n Back - Final_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -97,7 +97,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Android
+    buildTarget: VisionOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -123,7 +123,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WindowsStoreApps
+    buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Bot\xF3n 1 - Final_0"
+      name: "Bot\xF3n Back - Final_0"
       rect:
         serializedVersion: 2
-        x: 42
-        y: 190
-        width: 1817
-        height: 700
+        x: 332
+        y: 101
+        width: 1025
+        height: 953
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 64ef4105837646e00800000000000000
-      internalID: 1037067305761439302
+      spriteID: afb9af2913a1b9750800000000000000
+      internalID: 6312668102911499258
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "Bot\xF3n 1 - Final_0": 1037067305761439302
+      "Bot\xF3n Back - Final_0": 6312668102911499258
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
