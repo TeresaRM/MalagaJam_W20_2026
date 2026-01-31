@@ -62,6 +62,6 @@ public class MovementController : MonoBehaviour
             _impulseCounter -= falloffRate;
         }
 
-        _rigidbody.linearVelocity = direccion * _impulseCounter;
+        _rigidbody.linearVelocity = direccion * _impulseCounter * Time.deltaTime * 10;
     }
 }
