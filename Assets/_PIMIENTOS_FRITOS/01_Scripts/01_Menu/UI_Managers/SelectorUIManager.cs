@@ -17,10 +17,7 @@ public class SelectorUIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI leaderboardContents;
     [SerializeField] private float rankingFadeDuration;
 
-    private void Start()
-    {
-        fadeCanvasGroup.DOFade(0, fadeDuration);
-    }
+    private void Start() => fadeCanvasGroup.DOFade(0, fadeDuration);
 
     public void StartLevel(int level)
     {
