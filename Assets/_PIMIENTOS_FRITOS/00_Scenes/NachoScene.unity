@@ -580,7 +580,7 @@ MonoBehaviour:
   checkpointpass: 0
   time: 0
   totalPoints: 0
-  isPasted: 1
+  isPasted: 0
   polis:
   - {fileID: 1472082559}
   - {fileID: 333369298}
