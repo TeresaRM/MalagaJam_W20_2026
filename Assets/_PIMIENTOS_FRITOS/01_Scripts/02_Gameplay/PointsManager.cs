@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class PointsManager : MonoBehaviour
 {
+    [SerializeField] private GameObject checkPointLimit;
+
     public int numberOfObjects = 20;
 
     public float radius = 5f;
@@ -57,7 +59,12 @@ public class PointsManager : MonoBehaviour
                     if (i % 3 == 0)
                     {
                         var positionWorld = childCol.transform.TransformPoint(points[i] * offset);
-                        Instantiate(checkpoint, positionWorld, Quaternion.identity);
+
+                        if (positionWorld.y > checkPointLimit.transform.position.y) { 
+
+                            Instantiate(checkpoint, positionWorld, Quaternion.identity);
+                        }
+                        
 
                     }
                 }
