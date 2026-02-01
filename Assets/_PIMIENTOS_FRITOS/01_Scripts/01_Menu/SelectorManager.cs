@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class SelectorManager : MonoBehaviour
 {
     public static SelectorManager selectorManagerInstance;
+    public int currentLevel;
 
     [Header("Door Settings")]
     [SerializeField] private Button level2Button;
@@ -12,6 +13,8 @@ public class SelectorManager : MonoBehaviour
     private void Awake() => selectorManagerInstance = this;
 
     private void Start() => LockAllLevelsExceptFirst();
+
+    public void SetCurrentLevel(int levelIndex) => currentLevel = levelIndex;
 
     public void LockAllLevelsExceptFirst()
     {

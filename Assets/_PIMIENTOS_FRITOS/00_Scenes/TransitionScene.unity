@@ -896,13 +896,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3846a516825e6264f95c5947a0420e5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoadAfterAnimation: 3
   roomImageComponent: {fileID: 402064024}
   blurImageComponent: {fileID: 113858113}
   startImageRoom1: {fileID: 2350246355253280798, guid: 1e9914a59f102974990297bb06460826, type: 3}
-  startImageRoom2: {fileID: 0}
+  startImageRoom2: {fileID: 2350246355253280798, guid: 1e9914a59f102974990297bb06460826, type: 3}
   blurImageRoom1: {fileID: 8782370381054242134, guid: b5ba83c14b12f704ca1468c599403e88, type: 3}
-  blurImageRoom2: {fileID: 0}
+  blurImageRoom2: {fileID: 8782370381054242134, guid: b5ba83c14b12f704ca1468c599403e88, type: 3}
   handImage: {fileID: 134219498}
   startPosY: -1009
   endPosY: -175
