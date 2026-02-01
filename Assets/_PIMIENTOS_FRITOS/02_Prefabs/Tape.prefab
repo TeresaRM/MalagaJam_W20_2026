@@ -139,7 +139,7 @@ TrailRenderer:
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.2
+    widthMultiplier: 0.15
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -274,7 +274,7 @@ Camera:
   m_GameObject: {fileID: 5340661353869149340}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -383,8 +383,8 @@ GameObject:
   - component: {fileID: 6283817354895771976}
   - component: {fileID: 1736495780496176622}
   - component: {fileID: 3847129153786287480}
-  - component: {fileID: 187583634476451715}
   - component: {fileID: 2507362517252581733}
+  - component: {fileID: 1699733792066832738}
   m_Layer: 0
   m_Name: Tape
   m_TagString: Cinta
@@ -435,7 +435,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &7303844627731860011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -448,9 +448,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ea61fcb562907f4ba39c89d20071c27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  falloffRate: 0.5
-  MAXImpulse: 25
-  velocityChange: 3
+  falloffRate: 0.2
+  MAXImpulse: 10
+  velocityChange: 2
 --- !u!96 &5607086188622113999
 TrailRenderer:
   serializedVersion: 3
@@ -500,7 +500,7 @@ TrailRenderer:
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 1
+    widthMultiplier: 0.8
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -606,8 +606,21 @@ MonoBehaviour:
   turningLeft: {fileID: 21300000, guid: 744e21af58796ab47a2a18067b064eb6, type: 3}
   turningRight: {fileID: 21300000, guid: 6566dd1e2b9cafb438c79542268e3249, type: 3}
   forward: {fileID: 21300000, guid: 428a7c0670834014fb4b9a7d70db7165, type: 3}
---- !u!61 &187583634476451715
-BoxCollider2D:
+--- !u!114 &2507362517252581733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8763781959588270176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3310ffd3a0565c54ba2a316ef732a29d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultColor: {r: 0.63529414, g: 0.49803925, b: 0.34509805, a: 1}
+--- !u!70 &1699733792066832738
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -640,28 +653,6 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.07666415, y: 0.04216522}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1.0153323, y: 2.3722835}
-  m_EdgeRadius: 0
---- !u!114 &2507362517252581733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8763781959588270176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3310ffd3a0565c54ba2a316ef732a29d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultColor: {r: 0.63529414, g: 0.49803925, b: 0.34509805, a: 1}
+  m_Offset: {x: -0.059529096, y: -0.24291919}
+  m_Size: {x: 0.75056964, y: 1.4724038}
+  m_Direction: 0

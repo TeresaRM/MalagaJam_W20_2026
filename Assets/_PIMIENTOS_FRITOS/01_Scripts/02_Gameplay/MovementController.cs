@@ -14,8 +14,8 @@ public class MovementController : MonoBehaviour
 
     [Header("Rotation")]
     private TapeRotation tapeRotation;
-    public float mouseWheelInput { get; private set;}
-    
+    public float mouseWheelInput { get; private set; }
+
     private float _impulseCounter = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -26,7 +26,7 @@ public class MovementController : MonoBehaviour
     }
 
     private void Update()
-    {    
+    {
         direccion = transform.up;
 
         ImpulseChecker();
@@ -50,7 +50,7 @@ public class MovementController : MonoBehaviour
         if (_impulseCounter > MAXImpulse)
             _impulseCounter = MAXImpulse;
 
-        if (_impulseCounter < 0)
+        if (_impulseCounter < 0.4f)
             _impulseCounter = 0;
 
     }
@@ -63,5 +63,10 @@ public class MovementController : MonoBehaviour
         }
 
         _rigidbody.linearVelocity = direccion * _impulseCounter * Time.deltaTime * 10;
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        _rigidbody.linearVelocity = Vector2.zero;
     }
 }
