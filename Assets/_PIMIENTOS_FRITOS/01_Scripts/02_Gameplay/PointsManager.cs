@@ -41,7 +41,7 @@ public class PointsManager : MonoBehaviour
     public TextMeshProUGUI percentText;
 
     public int level;
-
+    public float percent;
     private int timerLeft = 360;
     private void Awake()
     {
@@ -143,7 +143,9 @@ public class PointsManager : MonoBehaviour
 
     public float GetPercentageCompleted()
     {
-        return (float)checkpointpass / (float)numberOfObjects * 100f;
+        percent = (float)checkpointpass / (float)numberOfObjects * 100f;
+
+        return percent;
     }
 
 
