@@ -21,6 +21,8 @@ public class AnimationUIManager : MonoBehaviour
     [SerializeField] private float crossFadeDuration;
     [SerializeField] private float handMoveDuration;
     [SerializeField] private float waitingTimeWithHand;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip audioClip;
 
     private void Start()
     {
@@ -44,6 +46,7 @@ public class AnimationUIManager : MonoBehaviour
     private void HandAnimation()
     {
         handImage.rectTransform.DOAnchorPosY(endPosY, 1f).SetEase(Ease.OutBack)
+            .OnStart(() => audioSource.PlayOneShot(audioClip)) 
             .OnComplete(() => StartCoroutine(ActionsAfterAnimation()));
     }
 
