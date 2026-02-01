@@ -1,8 +1,10 @@
 
 using System.Collections.Generic;
 using DG.Tweening;
+using TMPro;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PointsManager : MonoBehaviour
@@ -33,6 +35,14 @@ public class PointsManager : MonoBehaviour
     public RawImage imageFondo;
 
     public GameObject fondo;
+
+    public TextMeshProUGUI timer;
+
+    public TextMeshProUGUI percentText;
+
+    public int level;
+
+    private int timerLeft = 360;
     private void Awake()
     {
 
@@ -47,6 +57,7 @@ public class PointsManager : MonoBehaviour
     }
     void Start()
     {
+        percentText.text = Mathf.RoundToInt(0 * 100f).ToString() + "%";
         foreach (PolygonCollider2D childCol in polis)
         {
             for (int j = 0; j < childCol.pathCount; j++)
@@ -60,12 +71,22 @@ public class PointsManager : MonoBehaviour
                     {
                         var positionWorld = childCol.transform.TransformPoint(points[i] * offset);
 
-                        if (positionWorld.y > checkPointLimit.transform.position.y) { 
+                        if (positionWorld.y > checkPointLimit.transform.position.y)
+                        {
 
                             Instantiate(checkpoint, positionWorld, Quaternion.identity);
                         }
-                        
+                        else
+                        {
+                            numberOfObjects--;
+                        }
 
+
+                    }
+                    else
+                    {
+
+                        numberOfObjects--;
                     }
                 }
             }
@@ -76,23 +97,29 @@ public class PointsManager : MonoBehaviour
 
     void Update()
     {
-        if (time >= 10f)
-        {
+        timerLeft = 240 - Mathf.RoundToInt(time);
 
+        if (timerLeft <= 0 || GetPercentageCompleted() >= 100f)
+        {
+            SceneManager.LoadScene(4);
             // mainCamera.DOOrthoSize(5f, 2f);
             // LevelUIManager.GetComponent<LvlUIManager>().OpenResultsPanel();
         }
         else
         {
             time += 1 * Time.deltaTime;
+
+            timer.text = timerLeft.ToString() + "s";
         }
     }
 
     public void SetCheckpointPass()
     {
         checkpointpass++;
+        float percent = (float)checkpointpass / (float)numberOfObjects;
+        totalPoints = percent * 1000f - time;
 
-        totalPoints = (float)checkpointpass / (float)numberOfObjects * 1000f - time;
+        percentText.text = Mathf.RoundToInt(percent * 100f).ToString() + "%";
     }
 
     public float GetTotalPoints()
@@ -125,4 +152,16 @@ public class PointsManager : MonoBehaviour
         SpriteRenderer sr = fondo.GetComponent<SpriteRenderer>();
         return sr.color;
     }
+
+    public int GetLevel()
+    {
+        return level;
+    }
+
+    public void SetLevel(int lvl)
+    {
+        level = lvl;
+    }
+
+
 }
