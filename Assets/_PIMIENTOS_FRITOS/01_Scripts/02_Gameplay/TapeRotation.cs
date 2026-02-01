@@ -23,7 +23,7 @@ public class TapeRotation : MonoBehaviour
 
         var distance = Vector3.Distance(Input.mousePosition, Camera.main.WorldToScreenPoint(transform.position));
 
-        Debug.Log(distance);
+        // Debug.Log(distance);
         if (distance > 100f)
         {
             angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;

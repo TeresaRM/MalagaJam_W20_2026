@@ -33,7 +33,7 @@ public class SelectorManager : MonoBehaviour
 
     public void LockAllLevelsExceptFirst()
     {
-        level2Button.interactable = false;
+        level2Button.interactable = true;
         level3Button.interactable = false;
     }
 

@@ -611,7 +611,7 @@ MonoBehaviour:
   m_text: Camila
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 364a92df7a177b84b852cb75d078bab0, type: 2}
-  m_sharedMaterial: {fileID: -7695201585365188627, guid: 364a92df7a177b84b852cb75d078bab0, type: 2}
+  m_sharedMaterial: {fileID: 2243228415593708179, guid: 364a92df7a177b84b852cb75d078bab0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -747,7 +747,7 @@ MonoBehaviour:
   m_text: Teresa
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 364a92df7a177b84b852cb75d078bab0, type: 2}
-  m_sharedMaterial: {fileID: -7695201585365188627, guid: 364a92df7a177b84b852cb75d078bab0, type: 2}
+  m_sharedMaterial: {fileID: 2243228415593708179, guid: 364a92df7a177b84b852cb75d078bab0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -883,7 +883,7 @@ MonoBehaviour:
   m_text: Sandra
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 364a92df7a177b84b852cb75d078bab0, type: 2}
-  m_sharedMaterial: {fileID: -7695201585365188627, guid: 364a92df7a177b84b852cb75d078bab0, type: 2}
+  m_sharedMaterial: {fileID: 2243228415593708179, guid: 364a92df7a177b84b852cb75d078bab0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1019,7 +1019,7 @@ MonoBehaviour:
   m_text: "Galer\xEDa"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 364a92df7a177b84b852cb75d078bab0, type: 2}
-  m_sharedMaterial: {fileID: -7695201585365188627, guid: 364a92df7a177b84b852cb75d078bab0, type: 2}
+  m_sharedMaterial: {fileID: 2243228415593708179, guid: 364a92df7a177b84b852cb75d078bab0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1230,7 +1230,7 @@ MonoBehaviour:
   m_text: Nacho
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 364a92df7a177b84b852cb75d078bab0, type: 2}
-  m_sharedMaterial: {fileID: -7695201585365188627, guid: 364a92df7a177b84b852cb75d078bab0, type: 2}
+  m_sharedMaterial: {fileID: 2243228415593708179, guid: 364a92df7a177b84b852cb75d078bab0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1366,7 +1366,7 @@ MonoBehaviour:
   m_text: MASKING TAPE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 364a92df7a177b84b852cb75d078bab0, type: 2}
-  m_sharedMaterial: {fileID: -7695201585365188627, guid: 364a92df7a177b84b852cb75d078bab0, type: 2}
+  m_sharedMaterial: {fileID: 2243228415593708179, guid: 364a92df7a177b84b852cb75d078bab0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1621,7 +1621,7 @@ MonoBehaviour:
   m_text: Rafa
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 364a92df7a177b84b852cb75d078bab0, type: 2}
-  m_sharedMaterial: {fileID: -7695201585365188627, guid: 364a92df7a177b84b852cb75d078bab0, type: 2}
+  m_sharedMaterial: {fileID: 2243228415593708179, guid: 364a92df7a177b84b852cb75d078bab0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1757,7 +1757,7 @@ MonoBehaviour:
   m_text: Creativo
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 364a92df7a177b84b852cb75d078bab0, type: 2}
-  m_sharedMaterial: {fileID: -7695201585365188627, guid: 364a92df7a177b84b852cb75d078bab0, type: 2}
+  m_sharedMaterial: {fileID: 2243228415593708179, guid: 364a92df7a177b84b852cb75d078bab0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1981,7 +1981,7 @@ MonoBehaviour:
   m_text: Antonio J.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 364a92df7a177b84b852cb75d078bab0, type: 2}
-  m_sharedMaterial: {fileID: -7695201585365188627, guid: 364a92df7a177b84b852cb75d078bab0, type: 2}
+  m_sharedMaterial: {fileID: 2243228415593708179, guid: 364a92df7a177b84b852cb75d078bab0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2117,7 +2117,7 @@ MonoBehaviour:
   m_text: Pimientos Fritos
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 364a92df7a177b84b852cb75d078bab0, type: 2}
-  m_sharedMaterial: {fileID: -7695201585365188627, guid: 364a92df7a177b84b852cb75d078bab0, type: 2}
+  m_sharedMaterial: {fileID: 2243228415593708179, guid: 364a92df7a177b84b852cb75d078bab0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2764,7 +2764,7 @@ MonoBehaviour:
   m_text: Historia
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 364a92df7a177b84b852cb75d078bab0, type: 2}
-  m_sharedMaterial: {fileID: -7695201585365188627, guid: 364a92df7a177b84b852cb75d078bab0, type: 2}
+  m_sharedMaterial: {fileID: 2243228415593708179, guid: 364a92df7a177b84b852cb75d078bab0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2919,7 +2919,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1536870011}
   m_OnClick:
     m_PersistentCalls:
@@ -3100,7 +3100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a852ca0c1d08db42a4ad369abb6dbe2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FreeMode: 
+  FreeMode: Creativo
   HistoryMode: LevelSelector
   Gallery: Gallery
   fadeCanvasGroup: {fileID: 1022200748}
