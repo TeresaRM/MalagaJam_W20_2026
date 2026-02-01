@@ -47,13 +47,23 @@ public class PointsManager : MonoBehaviour
     {
         foreach (PolygonCollider2D childCol in polis)
         {
-            var points = childCol.points;
-            numberOfObjects += points.Length;
-            for (int i = 0; i < points.Length; i++)
+            for (int j = 0; j < childCol.pathCount; j++)
             {
-                var positionWorld = childCol.transform.TransformPoint(points[i] * offset);
-                Instantiate(checkpoint, positionWorld, Quaternion.identity);
+                var points = childCol.GetPath(j);
+                numberOfObjects += points.Length;
+
+                for (int i = 0; i < points.Length; i++)
+                {
+                    if (i % 3 == 0)
+                    {
+                        var positionWorld = childCol.transform.TransformPoint(points[i] * offset);
+                        Instantiate(checkpoint, positionWorld, Quaternion.identity);
+
+                    }
+                }
             }
+
+
         }
     }
 
@@ -61,7 +71,7 @@ public class PointsManager : MonoBehaviour
     {
         if (time >= 10f)
         {
-           
+
             // mainCamera.DOOrthoSize(5f, 2f);
             // LevelUIManager.GetComponent<LvlUIManager>().OpenResultsPanel();
         }
