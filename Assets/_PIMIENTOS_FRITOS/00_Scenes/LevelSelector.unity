@@ -720,6 +720,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 2071152191}
+        m_TargetAssemblyTypeName: SelectorManager, Assembly-CSharp
+        m_MethodName: SetCurrentLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1891768404}
         m_TargetAssemblyTypeName: SelectorUIManager, Assembly-CSharp
         m_MethodName: StartLevel
@@ -2659,6 +2671,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 2071152191}
+        m_TargetAssemblyTypeName: SelectorManager, Assembly-CSharp
+        m_MethodName: SetCurrentLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1891768404}
         m_TargetAssemblyTypeName: SelectorUIManager, Assembly-CSharp
         m_MethodName: StartLevel
@@ -4876,6 +4900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48b5b464efd4af748800546d95d5aaba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentLevel: 0
   level2Button: {fileID: 327058729}
   level3Button: {fileID: 1994694720}
 --- !u!1660057539 &9223372036854775807

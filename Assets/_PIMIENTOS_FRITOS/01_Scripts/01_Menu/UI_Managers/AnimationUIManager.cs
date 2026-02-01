@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class AnimationUIManager : MonoBehaviour
 {
-    [SerializeField] private int sceneToLoadAfterAnimation;
     [SerializeField] private Image roomImageComponent;
     [SerializeField] private Image blurImageComponent;
     [SerializeField] private Sprite startImageRoom1;
@@ -24,15 +23,27 @@ public class AnimationUIManager : MonoBehaviour
 
     private void Start()
     {
+        Cursor.visible = false;
         handImage.rectTransform.anchoredPosition = new Vector2(handImage.rectTransform.anchoredPosition.x, startPosY);
+        
+        if (SelectorManager.selectorManagerInstance != null && SelectorManager.selectorManagerInstance.currentLevel == 3)
+        {
+            if (roomImageComponent != null) roomImageComponent.sprite = startImageRoom1;
+            if (blurImageComponent != null) blurImageComponent.sprite = blurImageRoom1;
+        }
+        else
+        {
+            if (roomImageComponent != null) roomImageComponent.sprite = startImageRoom2;
+            if (blurImageComponent != null) blurImageComponent.sprite = blurImageRoom2;
+        }
+
+
         fadeCanvasGroup.DOFade(0, initialFadeDuration)
-            .OnStart(() =>
+            .OnComplete(() =>
             {
-                //todo
-                if (roomImageComponent != null) roomImageComponent.sprite = startImageRoom1;
-                if (blurImageComponent != null) blurImageComponent.sprite = blurImageRoom1;
-            })
-            .OnComplete(() => ImageCrossFade(blurImageRoom1, crossFadeDuration));
+                if (SelectorManager.selectorManagerInstance.currentLevel == 3) ImageCrossFade(blurImageRoom1, crossFadeDuration);
+                else ImageCrossFade(blurImageRoom2, crossFadeDuration);
+            });
     }
 
     private void ImageCrossFade(Sprite nextSprite, float duration)
@@ -51,6 +62,9 @@ public class AnimationUIManager : MonoBehaviour
     {
         yield return new WaitForSeconds(waitingTimeWithHand);
         fadeCanvasGroup.DOFade(1, initialFadeDuration)
-            .OnComplete(() => SceneManager.LoadScene(sceneToLoadAfterAnimation));   // load level 1 (NachoScene with index 3) or level 2
+            .OnComplete(() => {
+                SceneManager.LoadScene(SelectorManager.selectorManagerInstance.currentLevel);
+                Cursor.visible = true;
+            });
     }
 }
