@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PointsManager : MonoBehaviour
 {
@@ -27,7 +28,7 @@ public class PointsManager : MonoBehaviour
 
     public GameObject LevelUIManager;
 
-    public Camera mainCamera;
+    public RawImage imageFondo;
 
     public GameObject fondo;
     private void Awake()
@@ -60,8 +61,8 @@ public class PointsManager : MonoBehaviour
     {
         if (time >= 10f)
         {
-
-            mainCamera.DOOrthoSize(5f, 2f);
+           
+            // mainCamera.DOOrthoSize(5f, 2f);
             // LevelUIManager.GetComponent<LvlUIManager>().OpenResultsPanel();
         }
         else
