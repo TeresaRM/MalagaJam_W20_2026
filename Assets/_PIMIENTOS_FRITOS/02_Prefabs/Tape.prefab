@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6794649710405684139}
   - component: {fileID: 7326511198876454666}
   - component: {fileID: 3364813050722901386}
+  - component: {fileID: 2142241038899387511}
   m_Layer: 0
   m_Name: TapeImage
   m_TagString: Untagged
@@ -113,7 +114,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10756, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -138,19 +139,28 @@ TrailRenderer:
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.25
+    widthMultiplier: 0.2
     widthCurve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 1
+        time: 0.012233734
+        value: 0.78666687
         inSlope: 0
         outSlope: 0
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.9342507
+        value: 1.004444
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -208,6 +218,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66d9192992af1bf4cbb89d52aad74992, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2142241038899387511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3696668861689152759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3310ffd3a0565c54ba2a316ef732a29d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &5340661353869149340
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,6 +384,7 @@ GameObject:
   - component: {fileID: 1736495780496176622}
   - component: {fileID: 3847129153786287480}
   - component: {fileID: 187583634476451715}
+  - component: {fileID: 2507362517252581733}
   m_Layer: 0
   m_Name: Tape
   m_TagString: Cinta
@@ -481,8 +505,8 @@ TrailRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.004714966
-        value: 0.7412771
+        time: 0
+        value: 0.61683404
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -628,3 +652,16 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.0153323, y: 2.3722835}
   m_EdgeRadius: 0
+--- !u!114 &2507362517252581733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8763781959588270176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3310ffd3a0565c54ba2a316ef732a29d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultColor: {r: 0.63529414, g: 0.49803925, b: 0.34509805, a: 1}
