@@ -137,7 +137,7 @@ MonoBehaviour:
     AtlasWidth: 0
     AtlasHeight: 0
   m_glyphInfoList: []
-  m_KerningTable:
+  m_KerningTable:  
     kerningPairs: []
   fallbackFontAssets: []
   atlas: {fileID: 0}
