@@ -391,7 +391,7 @@ MonoBehaviour:
     - MainMenu
     - LevelSelector
     restartOnSwitch: 0
-    volume: 0.45
+    volume: 0.3
 --- !u!4 &187225774
 Transform:
   m_ObjectHideFlags: 0
