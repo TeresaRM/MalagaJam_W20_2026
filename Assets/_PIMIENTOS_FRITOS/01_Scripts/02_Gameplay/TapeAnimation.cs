@@ -22,7 +22,7 @@ public class TapeAnimation : MonoBehaviour
     void Update()
     {
         ChooseAnimation();
-        Debug.Log(rb.angularVelocity);
+        // Debug.Log(rb.angularVelocity);
     }
 
     void ChooseAnimation()

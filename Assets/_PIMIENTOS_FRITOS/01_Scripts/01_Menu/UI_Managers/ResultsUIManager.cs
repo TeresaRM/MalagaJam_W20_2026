@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LvlUIManager : MonoBehaviour
+public class ResultsUIManager : MonoBehaviour
 {
     [Header("Level Settings")]
     [SerializeField] private string leaderboardKey;

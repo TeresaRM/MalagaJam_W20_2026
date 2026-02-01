@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine.Rendering;
 public class TapeRotation : MonoBehaviour
 {
-    public float angle {  get; private set; }
+    public float angle { get; private set; }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -21,8 +21,14 @@ public class TapeRotation : MonoBehaviour
         mousePos.x = mousePos.x - objectPos.x;
         mousePos.y = mousePos.y - objectPos.y;
 
+        var distance = Vector3.Distance(Input.mousePosition, Camera.main.WorldToScreenPoint(transform.position));
+
+        Debug.Log(distance);
+        if (distance > 100f)
+        {
             angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle - 90));
-           
+        }
+
     }
 }
