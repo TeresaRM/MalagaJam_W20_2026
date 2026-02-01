@@ -28,7 +28,7 @@ public class SelectorUIManager : MonoBehaviour
     private IEnumerator ActionsAfterStartAnim(int level)
     {
         yield return new WaitForSeconds(fadeDuration);
-        SceneManager.LoadScene(level);  // load selected level (lvl 1 = 2, lvl 2 = 3, lvl 3 = 4)
+        SceneManager.LoadScene(level);  // load selected level (lvl 1 = 3, lvl 2 = 4, lvl 3 = 5)
     }
 
     private void LeaveLevelSelector() => fadeCanvasGroup.DOFade(1, fadeDuration);
