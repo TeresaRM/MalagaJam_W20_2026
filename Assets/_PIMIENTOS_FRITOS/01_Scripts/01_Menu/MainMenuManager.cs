@@ -40,11 +40,8 @@ public class MainMenu : MonoBehaviour
     private IEnumerator ActionsAfterQuit()
     {
         yield return new WaitForSeconds(fadeDuration);
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
+
         Application.Quit();
-    }
-#endif
+
     }
 }
