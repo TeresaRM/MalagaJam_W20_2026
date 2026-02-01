@@ -27,7 +27,7 @@ public class AnimationUIManager : MonoBehaviour
     {
         Cursor.visible = false;
         handImage.rectTransform.anchoredPosition = new Vector2(handImage.rectTransform.anchoredPosition.x, startPosY);
-        
+        Debug.Log(SelectorManager.selectorManagerInstance.currentLevel);
         if (SelectorManager.selectorManagerInstance != null && SelectorManager.selectorManagerInstance.currentLevel == 3)
         {
             if (roomImageComponent != null) roomImageComponent.sprite = startImageRoom1;

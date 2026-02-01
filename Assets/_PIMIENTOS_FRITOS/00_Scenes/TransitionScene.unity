@@ -555,7 +555,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 6455456383bcd284a9ad7fea76fb42ac, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -899,9 +899,9 @@ MonoBehaviour:
   roomImageComponent: {fileID: 402064024}
   blurImageComponent: {fileID: 113858113}
   startImageRoom1: {fileID: 2350246355253280798, guid: 1e9914a59f102974990297bb06460826, type: 3}
-  startImageRoom2: {fileID: 2350246355253280798, guid: 1e9914a59f102974990297bb06460826, type: 3}
+  startImageRoom2: {fileID: 6925621568662677412, guid: 8235d782c86c30a49a94971b90cf7390, type: 3}
   blurImageRoom1: {fileID: 8782370381054242134, guid: b5ba83c14b12f704ca1468c599403e88, type: 3}
-  blurImageRoom2: {fileID: 8782370381054242134, guid: b5ba83c14b12f704ca1468c599403e88, type: 3}
+  blurImageRoom2: {fileID: 5421300732332928117, guid: a4b796b5d5e276b438a8de526a9d57f3, type: 3}
   handImage: {fileID: 134219498}
   startPosY: -1009
   endPosY: -175

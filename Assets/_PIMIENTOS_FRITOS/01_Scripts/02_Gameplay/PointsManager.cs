@@ -10,6 +10,7 @@ using UnityEngine.UI;
 public class PointsManager : MonoBehaviour
 {
     [SerializeField] private GameObject checkPointLimit;
+    [SerializeField] private CanvasGroup fadeCanvasGroup;
 
     public int numberOfObjects = 20;
 
@@ -99,9 +100,10 @@ public class PointsManager : MonoBehaviour
     {
         timerLeft = 240 - Mathf.RoundToInt(time);
 
-        if (timerLeft <= 0 || GetPercentageCompleted() >= 100f)
+        if (timerLeft <= 0 || GetPercentageCompleted() >= 2f)
         {
-            SceneManager.LoadScene(4);
+            fadeCanvasGroup.DOFade(1, 1f)
+                .OnComplete(() => SceneManager.LoadScene(4));   // cargar pantalla de resultados
             // mainCamera.DOOrthoSize(5f, 2f);
             // LevelUIManager.GetComponent<LvlUIManager>().OpenResultsPanel();
         }
