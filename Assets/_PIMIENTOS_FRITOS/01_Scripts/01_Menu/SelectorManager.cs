@@ -10,7 +10,22 @@ public class SelectorManager : MonoBehaviour
     [SerializeField] private Button level2Button;
     [SerializeField] private Button level3Button;
 
-    private void Awake() => selectorManagerInstance = this;
+    //private void Awake() => selectorManagerInstance = this;
+
+    private void Awake()
+    {
+        if (selectorManagerInstance == null)
+        {
+            selectorManagerInstance = this;
+        }
+        else if(selectorManagerInstance != this)
+        {
+            Destroy(this.gameObject);
+        }
+
+
+
+    }
 
     private void Start() => LockAllLevelsExceptFirst();
 
