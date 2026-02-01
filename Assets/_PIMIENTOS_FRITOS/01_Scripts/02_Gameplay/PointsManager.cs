@@ -1,8 +1,9 @@
 
 using System.Collections.Generic;
-using System.Drawing;
+using DG.Tweening;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PointsManager : MonoBehaviour
 {
@@ -24,6 +25,12 @@ public class PointsManager : MonoBehaviour
 
     public bool isPasted = false;
     public List<PolygonCollider2D> polis = new List<PolygonCollider2D>();
+
+    public GameObject LevelUIManager;
+
+    public RawImage imageFondo;
+
+    public GameObject fondo;
     private void Awake()
     {
 
@@ -52,7 +59,16 @@ public class PointsManager : MonoBehaviour
 
     void Update()
     {
-        time += 1 * Time.deltaTime;
+        if (time >= 10f)
+        {
+           
+            // mainCamera.DOOrthoSize(5f, 2f);
+            // LevelUIManager.GetComponent<LvlUIManager>().OpenResultsPanel();
+        }
+        else
+        {
+            time += 1 * Time.deltaTime;
+        }
     }
 
     public void SetCheckpointPass()
@@ -76,5 +92,20 @@ public class PointsManager : MonoBehaviour
         isPasted = pasted;
     }
 
+    public float GetTime()
+    {
+        return time;
+    }
 
+    public float GetPercentageCompleted()
+    {
+        return (float)checkpointpass / (float)numberOfObjects * 100f;
+    }
+
+
+    public Color GetColorFondo()
+    {
+        SpriteRenderer sr = fondo.GetComponent<SpriteRenderer>();
+        return sr.color;
+    }
 }
