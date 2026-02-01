@@ -12,11 +12,8 @@ EditorBuildSettings:
     path: Assets/_PIMIENTOS_FRITOS/00_Scenes/LevelSelector.unity
     guid: cb6ce07323c69214c88e0889b892052d
   - enabled: 1
-    path: Assets/_PIMIENTOS_FRITOS/00_Scenes/Lvl1.unity
-    guid: fe1508a491a44c040bb5e0aaf200f39b
-  - enabled: 1
-    path: Assets/_PIMIENTOS_FRITOS/00_Scenes/Gallery.unity
-    guid: b704c1891e4d7ea4582ef2c01afaf8c6
+    path: Assets/_PIMIENTOS_FRITOS/00_Scenes/NachoScene.unity
+    guid: ad64dd8de3cbd8b44adb2c34fe6d4ee1
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
