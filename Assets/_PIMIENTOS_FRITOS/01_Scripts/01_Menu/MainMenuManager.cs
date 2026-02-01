@@ -21,7 +21,7 @@ public class MainMenu : MonoBehaviour
         LeaveMainMenu();
     }
 
-    private IEnumerator ActionsAfterStartAnim()
+    private IEnumerator ActionsAfterStartAnim() 
     {
         yield return new WaitForSeconds(fadeDuration);
         SceneManager.LoadScene(HistoryMode);             // load selected level (lvl 1 = 2, lvl 2 = 3, lvl 3 = 4)
