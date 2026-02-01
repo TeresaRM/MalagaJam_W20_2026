@@ -24,20 +24,25 @@ public class LvlUIManager : MonoBehaviour
 
     public void OpenResultsPanel()
     {
-        resultsContainerCanvasGroup.DOFade(1, initialFadeDuration)
-            .OnComplete(() =>
-            {
-                resultsContainerCanvasGroup.blocksRaycasts = true;
-                resultsContainerCanvasGroup.interactable = true;
-                SetPlayerScore();
-                SetTimeTaken();
-            });
+
+        fadeCanvasGroup.DOFade(1, initialFadeDuration).OnComplete(() =>
+        {
+            resultsContainerCanvasGroup.DOFade(1, initialFadeDuration)
+          .OnComplete(() =>
+          {
+              resultsContainerCanvasGroup.blocksRaycasts = true;
+              resultsContainerCanvasGroup.interactable = true;
+              SetPlayerScore();
+              SetTimeTaken();
+          });
+        });
+
     }
 
     private void SetPlayerScore()
     {
         if (PointsManager.Instance != null)
-            playerScoreTxt.text = "Puntuación: " + (int)PointsManager.Instance.totalPoints;
+            playerScoreTxt.text = "Puntuaciï¿½n: " + (int)PointsManager.Instance.GetTotalPoints();
     }
 
     private void SetTimeTaken()
