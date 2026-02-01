@@ -6,6 +6,8 @@ public class MovementController : MonoBehaviour
 {
     private Rigidbody2D _rigidbody;
     private Vector2 direccion;
+    private AudioSource _audioSource;
+    [SerializeField] private AudioClip tape;
 
     [Header("Translation")]
     [SerializeField] float falloffRate = 0.01f;
@@ -23,6 +25,8 @@ public class MovementController : MonoBehaviour
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         tapeRotation = GetComponent<TapeRotation>();
+        _audioSource = GetComponent<AudioSource>();
+        _audioSource.clip = tape;
     }
 
     private void Update()
@@ -63,10 +67,20 @@ public class MovementController : MonoBehaviour
         }
 
         _rigidbody.linearVelocity = direccion * _impulseCounter * Time.deltaTime * 10;
+
+        if(_rigidbody.linearVelocity != Vector2.zero)
+        {
+            _audioSource.Play();
+        } else
+        {
+            _audioSource.Pause();
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
         _rigidbody.linearVelocity = Vector2.zero;
     }
+
+
 }
