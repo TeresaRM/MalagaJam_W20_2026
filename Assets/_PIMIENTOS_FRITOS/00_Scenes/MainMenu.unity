@@ -1561,7 +1561,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FreeMode: 
   HistoryMode: LevelSelector
-  Gallery: 
+  Gallery: Gallery
   fadeCanvasGroup: {fileID: 1022200748}
 --- !u!4 &1625866905
 Transform:
