@@ -12,17 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 182cd195a28310e479cddf7ff82822f8, type: 3}
   m_Name: LootLockerConfig
   m_EditorClassIdentifier: 
-  apiKey: dev_3d11d1340d98437c810dc32758beeb44
+  apiKey: 
   adminToken: 
-  domainKey: gfo2rc18
+  domainKey: 
   game_version: 1.0.0.0
-  sdk_version: 7.0.0
+  sdk_version: 
   url: https://api.lootlocker.com/v1
-  adminUrl: https://gfo2rc18.api.lootlocker.com/admin
-  playerUrl: https://gfo2rc18.api.lootlocker.com/player
-  userUrl: https://gfo2rc18.api.lootlocker.com/game
-  webSocketBaseUrl: wss://gfo2rc18.api.lootlocker.com/game
-  baseUrl: https://gfo2rc18.api.lootlocker.com
+  adminUrl: https://api.lootlocker.com/admin
+  playerUrl: https://api.lootlocker.com/player
+  userUrl: https://api.lootlocker.com/game
+  webSocketBaseUrl: wss://api.lootlocker.com/game
+  baseUrl: https://api.lootlocker.com
   clientSideRequestTimeOut: 180
   logLevel: 2
   prettifyJson: 1
