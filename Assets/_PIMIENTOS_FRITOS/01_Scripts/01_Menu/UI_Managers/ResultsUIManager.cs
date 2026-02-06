@@ -20,36 +20,44 @@ public class ResultsUIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI playerTimeTxt;
     [SerializeField] private TMP_InputField nameInputField;
 
-    private void Start() => fadeCanvasGroup.DOFade(0, initialFadeDuration);
+    // private void Start() => fadeCanvasGroup.DOFade(0, initialFadeDuration);
 
-    public void OpenResultsPanel()
+    private void Start()
     {
 
-        fadeCanvasGroup.DOFade(1, initialFadeDuration).OnComplete(() =>
-        {
-            resultsContainerCanvasGroup.DOFade(1, initialFadeDuration)
-          .OnComplete(() =>
-          {
-              resultsContainerCanvasGroup.blocksRaycasts = true;
-              resultsContainerCanvasGroup.interactable = true;
-              SetPlayerScore();
-              SetTimeTaken();
-          });
-        });
+        SetPlayerScore();
+        SetTimeTaken();
+        fadeCanvasGroup.DOFade(0, initialFadeDuration).OnComplete(() =>
+                 {
+                     resultsContainerCanvasGroup.DOFade(1, initialFadeDuration)
+                 .OnComplete(() =>
+                 {
+                     resultsContainerCanvasGroup.blocksRaycasts = true;
+                     resultsContainerCanvasGroup.interactable = true;
 
+                 });
+                 });
     }
+
+    // public void OpenResultsPanel()
+    // {
+
+
+
+    // }
 
     private void SetPlayerScore()
     {
+        // Debug.Log(PointsManager.Instance.GetTotalPoints());
         if (PointsManager.Instance != null)
-            playerScoreTxt.text = "Puntuaci�n: " + (int)PointsManager.Instance.GetTotalPoints();
+            playerScoreTxt.text = "Puntos: " + (int)PointsManager.Instance.GetTotalPoints();
     }
 
     private void SetTimeTaken()
     {
         if (PointsManager.Instance != null)
         {
-            int totalSeconds = (int)PointsManager.Instance.time;
+            int totalSeconds = (int)PointsManager.Instance.GetTime();
             int minutes = totalSeconds / 60;
             int seconds = totalSeconds % 60;
             string formattedTime = $"Tiempo: {minutes:00}:{seconds:00}";
@@ -70,13 +78,13 @@ public class ResultsUIManager : MonoBehaviour
         if (PointsManager.Instance != null)
         {
             if (LootLockerLeaderboardManager.leaderboardManagerInstance != null)
-                LootLockerLeaderboardManager.leaderboardManagerInstance.SubmitNewEntryToLeaderboard(leaderboardKey, playerName, (int)PointsManager.Instance.totalPoints);
+                LootLockerLeaderboardManager.leaderboardManagerInstance.SubmitNewEntryToLeaderboard(leaderboardKey, playerName, (int)PointsManager.Instance.GetTotalPoints());
         }
     }
 
     public void ReturnButton()
     {
-        if (SelectorManager.selectorManagerInstance != null && PointsManager.Instance.totalPoints >= minPointsRequiredToCompleteLevel)
+        if (SelectorManager.selectorManagerInstance != null && PointsManager.Instance.GetTotalPoints() >= minPointsRequiredToCompleteLevel)
             SelectorManager.selectorManagerInstance.UnlockLevel2();
 
         StartCoroutine(ActionsAfterLeavingLevel());

@@ -51,13 +51,14 @@ public class PointsManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        else
-        {
-            Instance = this;
-        }
+        DontDestroyOnLoad(gameObject);
+
+        Instance = this;
+
     }
     void Start()
     {
+
         percentText.text = Mathf.RoundToInt(0 * 100f).ToString() + "%";
         foreach (PolygonCollider2D childCol in polis)
         {
@@ -100,7 +101,7 @@ public class PointsManager : MonoBehaviour
     {
         timerLeft = 240 - Mathf.RoundToInt(time);
 
-        if (timerLeft <= 0 || GetPercentageCompleted() >= 2f)
+        if (timerLeft <= 0 || GetPercentageCompleted() >= 100f)
         {
             fadeCanvasGroup.DOFade(1, 1f)
                 .OnComplete(() => SceneManager.LoadScene(4));   // cargar pantalla de resultados

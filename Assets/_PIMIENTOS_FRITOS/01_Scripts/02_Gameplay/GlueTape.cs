@@ -1,3 +1,4 @@
+using System.Drawing;
 using UnityEngine;
 
 public class GlueTape : MonoBehaviour
@@ -15,13 +16,15 @@ public class GlueTape : MonoBehaviour
         if (Input.GetKey(KeyCode.Space) || Input.GetMouseButton(1))
         {
             _tapeTrail.emitting = true;
-            PointsManager.Instance.SetIsPasted(true);
+            if (PointsManager.Instance != null)
+                PointsManager.Instance.SetIsPasted(true);
         }
         else
         {
             _tapeTrail.emitting = false;
-            PointsManager.Instance.SetIsPasted(false);
+            if (PointsManager.Instance != null)
+                PointsManager.Instance.SetIsPasted(false);
         }
-            
+
     }
 }
